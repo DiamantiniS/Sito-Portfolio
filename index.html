@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <!-- Div per Particle.js -->
+    <div id="particles-js"></div> 
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top pt-0 pb-0">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./css/logo_simone-removebg-preview.png" alt="Icona Portfolio" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Chi Sono</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Competenze</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home text-center">
+        <div class="container mt-5 pt-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 home-content" data-aos="fade-right">
+                    <h1 class="display-4">Ciao, Sono <span>Simone</span></h1>
+                    <h3 class="typing-text">Web Developer & Designer</h3>
+                    <p class="lead">Creo siti web dinamici e user-friendly.</p>
+                    <a href="#contact" class="btn btn-primary">Contattami</a>
+                </div>
+                <div class="col-md-6 home-img" data-aos="fade-left">
+                    <img src="./css/img no sfondo.png" class="img-fluid rounded-circle" alt="Profile Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-dark text-white">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center">Chi Sono</h2>
+            <p class="text-center">Scrivi qui una breve descrizione di te stesso, le tue passioni e le tue esperienze professionali.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center">Competenze</h2>
+            <ul class="list-group list-group-horizontal justify-content-center">
+                <li class="list-group-item bg-dark text-white">HTML</li>
+                <li class="list-group-item bg-dark text-white">CSS</li>
+                <li class="list-group-item bg-dark text-white">JavaScript</li>
+                <li class="list-group-item bg-dark text-white">Angular</li>
+                <li class="list-group-item bg-dark text-white">Typescript</li>
+                <li class="list-group-item bg-dark text-white">.Net</li>
+                <li class="list-group-item bg-dark text-white">SqlServer</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-dark text-white">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center">Progetti</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 bg-dark text-white">
+                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Progetto 1</h5>
+                            <p class="card-text">Breve descrizione del progetto 1.</p>
+                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 bg-dark text-white">
+                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Progetto 2</h5>
+                            <p class="card-text">Breve descrizione del progetto 2.</p>
+                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 bg-dark text-white">
+                        <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Progetto 3</h5>
+                            <p class="card-text">Breve descrizione del progetto 3.</p>
+                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center">Contatti</h2>
+            <form class="mt-4">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control bg-dark text-white" id="name" placeholder="Il tuo nome">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control bg-dark text-white" id="email" placeholder="La tua email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Messaggio</label>
+                    <textarea class="form-control bg-dark text-white" id="message" rows="3" placeholder="Il tuo messaggio"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Invia</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>© 2024 Il Mio Portfolio - Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ADD8E6"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ADD8E6",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 300,
+                        "duration": 0.6
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    
+</body>
+</html>
