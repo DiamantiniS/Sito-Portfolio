@@ -13,29 +13,46 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -10; /* Adjusted z-index for interaction */
+    z-index: -10; /* Assicurati che sia dietro tutto il contenuto */
 }
 
+/* Navbar Styles */
 .navbar {
-    background-color: #212529; /* Dark color with slight transparency */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: transparent; /* Navbar trasparente */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.navbar:hover {
-    background-color: #343a40;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Navbar diventa semi-opaca durante lo scroll */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav-link {
     color: #fff;
     font-size: 1.1rem;
-    margin-right: 20px;
-    transition: color 0.3s;
+    margin-right: 1em; /* Utilizza % per margini responsive */
+    position: relative; /* Necessario per l'effetto della linea */
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.2rem; /* Usato rem per la dimensione */
+    display: block;
+    margin-top: 0.5rem;
+    right: 0;
+    background: #38b6ff; /* Colore della linea */
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #38b6ff; /* Bright hover color */
+    color: #38b6ff; /* Colore del testo al passaggio del mouse */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Espande la linea sotto il testo */
 }
 
 /* Home Section */
@@ -45,32 +62,38 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: transparent;
-    position: relative;
-    z-index: 1; /* Make sure home content stays on top */
+}
+
+.home-content {
+    flex: 1; /* Permette al contenuto di occupare spazio */
 }
 
 .home-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Rimpicciolito per allineamento migliore */
     font-weight: bold;
     color: #ffffff;
 }
 
 .home-content .typing-text {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Rimpicciolito per allineamento migliore */
     color: #38b6ff;
 }
 
 .home-content p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Mantieni il rem */
     color: #bbbbbb;
-    margin-bottom: 20px;
+    margin-bottom: 2rem; /* Utilizza rem */
+}
+
+.home-img {
+    display: flex; /* Utilizza flex per un migliore allineamento */
+    justify-content: center; /* Allinea l'immagine al centro */
 }
 
 .home-img img {
-    max-width: 400px;
+    max-width: 20rem; /* Ridotto per migliorare l'allineamento */
     border-radius: 50%;
-    border: 5px solid #38b6ff;
+    border: 0.5rem solid #38b6ff; /* Utilizza rem */
     transition: transform 0.3s;
 }
 
@@ -83,7 +106,7 @@ body {
     background-color: #38b6ff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 0.6rem 1.2rem; /* Utilizza rem */
     font-size: 1.1rem;
     border-radius: 50px;
     transition: background-color 0.3s, transform 0.3s;
@@ -98,61 +121,100 @@ body {
 #about {
     background-color: #1e1e1e;
     color: #ffffff;
-    padding: 60px 0;
+    padding: 6rem 0; /* Utilizza rem */
 }
 
 #about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Mantieni il rem */
+    margin-bottom: 2rem; /* Utilizza rem */
     color: #38b6ff;
 }
 
 #about p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Mantieni il rem */
     color: #bbbbbb;
     line-height: 1.6;
 }
 
 /* Skills Section */
 #skills {
-    background-color: #121212;
+    background-color: transparent;
     color: #fff;
-    padding: 60px 0;
+    padding: 6rem 0; /* Utilizza rem */
 }
 
 #skills h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Mantieni il rem */
+    margin-bottom: 4rem; /* Utilizza rem */
     color: #38b6ff;
+    position: relative;
 }
 
-.list-group-item {
-    background-color: #1e1e1e;
-    color: #fff;
-    border: none;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
+#skills h2::after {
+    content: '';
+    position: absolute;
+    width: 60px; /* Mantieni la larghezza in px per la barra */
+    height: 0.4rem; /* Usato rem per la dimensione */
+    background: #38b6ff;
+    bottom: -1rem; /* Usato rem per il margine */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.list-group-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+/* Card Styles for Skills and Contacts */
+.skill-card,
+.contact-card {
+    height: 12rem; /* Altezza ridotta per tutte le card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra il contenuto verticalmente */
+    text-align: center; /* Centra il contenuto orizzontalmente */
+    background-color: #1e1e1e; /* Stesso colore delle altre card */
+    padding: 2rem; /* Utilizza rem */
+    border-radius: 10px; /* Mantieni il bordo arrotondato */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover,
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Add hover effect on the contact cards */
+.contact-card {
+    cursor: pointer; /* Cambia il cursore per indicare interattività */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetto di hover */
+}
+.contact-card:hover {
+    transform: scale(1.05); /* Ingrandisci leggermente al passaggio del mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Icon Styles */
+.skill-card i,
+.skill-card .icon,
+.contact-card i,
+.contact-card .icon {
+    color: #38b6ff; /* Colore delle icone */
+    margin-bottom: 1rem; /* Spaziatura con rem */
+    width: 3rem; /* Dimensione uniforme per icone SVG */
+    height: 3rem;
 }
 
 /* Projects Section */
 #projects {
     background-color: #1e1e1e;
     color: #ffffff;
-    padding: 60px 0;
+    padding: 6rem 0; /* Utilizza rem */
 }
 
 #projects .card {
     background-color: #2c2c2c;
     border: none;
     border-radius: 10px;
-    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -161,25 +223,10 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-#projects .card img {
-    border-radius: 10px 10px 0 0;
-}
-
-#projects .card-title {
-    font-size: 1.5rem;
-    color: #38b6ff;
-}
-
 /* Contact Section */
 #contact {
-    background-color: #121212;
-    padding: 60px 0;
-}
-
-#contact form {
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 10px;
+    background-color: transparent;
+    padding: 6rem 0; /* Utilizza rem */
 }
 
 #contact .form-label {
@@ -187,17 +234,10 @@ body {
 }
 
 #contact .form-control {
-    background-color: #2c2c2c;
     color: #ffffff;
     border: 1px solid #555;
-    padding: 15px;
+    padding: 1rem; /* Utilizza rem */
     border-radius: 5px;
-}
-
-#contact .btn-primary {
-    background-color: #38b6ff;
-    border: none;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 #contact .btn-primary:hover {
@@ -209,10 +249,40 @@ body {
 footer {
     background-color: #1e1e1e;
     color: #bbbbbb;
-    padding: 20px 0;
+    padding: 2rem 0; /* Utilizza rem */
 }
 
 footer p {
     margin: 0;
     font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2.5rem; /* Mantieni il rem */
+    }
+    .home-content .typing-text {
+        font-size: 1.5rem; /* Mantieni il rem */
+    }
+    .home-img img {
+        max-width: 25rem; /* Utilizza rem per larghezza massima */
+    }
+    #about h2 {
+        font-size: 2rem; /* Mantieni il rem */
+    }
+    #about p {
+        font-size: 1rem; /* Mantieni il rem */
+    }
+    #skills h2 {
+        font-size: 2rem; /* Mantieni il rem */
+    }
+    .skill-card,
+    .contact-card {
+        height: 14rem; /* Rimpicciolita per le versioni mobile */
+        padding: 1.5rem; /* Padding più piccolo */
+    }
+    #projects .card {
+        margin-bottom: 2rem; /* Margine inferiore */
+    }
 }
