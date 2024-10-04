@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
@@ -167,31 +167,94 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card bg-dark text-white">
-                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                        <video class="card-img-top project-video" muted>
+                            <source src="./css/video/Registrazione dello schermo 2024-10-04 182550.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="card-body">
-                            <h5 class="card-title">Progetto 1</h5>
-                            <p class="card-text">Breve descrizione del progetto 1.</p>
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                            <h5 class="card-title">Netflix Clone</h5>
+                            <p class="card-text">Ho realizzato per un progetto di corso, con l'ausilio di Bootstrap, il clone di Netflix!</p>
+                            <a href="https://github.com/DiamantiniS/EPICODE-FS0324/tree/main/2%C2%B0mese/2%C2%B0settimana/03-05" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Project 1 -->
+                <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-dark text-white">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project1ModalLabel">Netflix Clone</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <video class="w-100" controls>
+                                    <source src="./css/video/Registrazione dello schermo 2024-10-04 182550.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card bg-dark text-white">
-                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                        <video class="card-img-top project-video" muted>
+                            <source src="./css/video/Registrazione dello schermo 2024-10-04 184533.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="card-body">
-                            <h5 class="card-title">Progetto 2</h5>
+                            <h5 class="card-title">Clone Medium</h5>
                             <p class="card-text">Breve descrizione del progetto 2.</p>
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                            <a href="https://github.com/DiamantiniS/EPICODE-FS0324/tree/main/2%C2%B0mese/1%C2%B0settimana/26-04" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Project 2 -->
+                <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-dark text-white">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project2ModalLabel">Clone Medium</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <video class="w-100" controls>
+                                    <source src="./css/video/Registrazione dello schermo 2024-10-04 184533.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card bg-dark text-white">
-                        <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                        <video class="card-img-top project-video" muted>
+                            <source src="./css/video/Registrazione dello schermo 2024-10-04 233349.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="card-body">
-                            <h5 class="card-title">Progetto 3</h5>
+                            <h5 class="card-title">Fitness Tracker</h5>
                             <p class="card-text">Breve descrizione del progetto 3.</p>
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                            <a href="https://github.com/DiamantiniS/Capstone" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Project 3 -->
+                <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-dark text-white">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project3ModalLabel">Fitness Tracker</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <video class="w-100" controls>
+                                    <source src="./css/video/Registrazione dello schermo 2024-10-04 233349.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,78 +268,88 @@
         <h2 class="text-center">Contatti</h2>
         <p class="text-center">Puoi contattarmi attraverso i seguenti canali:</p>
         <div class="row mt-4">
-            <div class="col-md-3 mb-3 text-center">
-                <a href="mailto:your-email@example.com" class="text-decoration-none">
-                    <div class="card bg-dark text-white contact-card">
-                        <div class="card-body">
-                            <i class="fas fa-envelope fa-2x mb-2"></i>
-                            <p>Email</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-3 text-center">
-                <a href="https://wa.me/your-phone-number" target="_blank" class="text-decoration-none">
-                    <div class="card bg-dark text-white contact-card">
-                        <div class="card-body">
-                            <i class="fab fa-whatsapp fa-2x mb-2"></i>
-                            <p>WhatsApp</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-3 text-center">
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="text-decoration-none">
-                    <div class="card bg-dark text-white contact-card">
-                        <div class="card-body">
-                            <i class="fab fa-linkedin fa-2x mb-2"></i>
-                            <p>LinkedIn</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-3 text-center">
-                <a href="https://github.com/your-github" target="_blank" class="text-decoration-none">
-                    <div class="card bg-dark text-white contact-card">
-                        <div class="card-body">
-                            <i class="fab fa-github fa-2x mb-2"></i>
-                            <p>GitHub</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="mt-5">
-            <h3 class="text-center">Inviami un Messaggio</h3>
-            <form class="mt-4" method="POST" action="mailto:your-email@example.com">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control bg-dark text-white" id="name" placeholder="Il tuo nome" required>
+                    <div class="col-md-6 mb-3 text-center">
+                        <a href="./allegati/CV Aggiornato.pdf" download class="text-decoration-none">
+                            <div class="card bg-dark text-white contact-card">
+                                <div class="card-body">
+                                    <i class="fas fa-file-download fa-2x mb-2"></i>
+                                    <p>Scarica CV</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control bg-dark text-white" id="email" placeholder="La tua email" required>
+                    <div class="col-md-6 mb-3 text-center">
+                        <a href="https://wa.me/3409081704" target="_blank" class="text-decoration-none">
+                            <div class="card bg-dark text-white contact-card">
+                                <div class="card-body">
+                                    <i class="fab fa-whatsapp fa-2x mb-2"></i>
+                                    <p>WhatsApp</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3 text-center">
+                        <a href="https://www.linkedin.com/in/simone-diamantini-9973002aa/" target="_blank" class="text-decoration-none">
+                            <div class="card bg-dark text-white contact-card">
+                                <div class="card-body">
+                                    <i class="fab fa-linkedin fa-2x mb-2"></i>
+                                    <p>LinkedIn</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3 text-center">
+                        <a href="https://github.com/DiamantiniS" target="_blank" class="text-decoration-none">
+                            <div class="card bg-dark text-white contact-card">
+                                <div class="card-body">
+                                    <i class="fab fa-github fa-2x mb-2"></i>
+                                    <p>GitHub</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Messaggio</label>
-                    <textarea class="form-control bg-dark text-white" id="message" rows="3" placeholder="Il tuo messaggio" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Invia</button>
-            </form>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="text-center">Inviami un Messaggio</h3>
+                <form class="mt-4" method="POST" action="mailto:your-email@example.com">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control bg-dark text-white" id="name" placeholder="Il tuo nome" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control bg-dark text-white" id="email" placeholder="La tua email" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="message" class="form-label">Messaggio</label>
+                            <textarea class="form-control bg-dark text-white" id="message" rows="3" placeholder="Il tuo messaggio" required></textarea>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary">Invia</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </section>
+
+
 
 
     <footer class="text-center py-4 bg-dark text-white">
         <p>© 2024 Il Mio Portfolio - Tutti i diritti riservati.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> 
     <script src="./js/index.js"></script>
     <script>
         AOS.init();

@@ -91,7 +91,7 @@ body {
 }
 
 .home-img img {
-    max-width: 20rem; /* Ridotto per migliorare l'allineamento */
+    max-width: 40rem; /* Ridotto per migliorare l'allineamento */
     border-radius: 50%;
     border: 0.5rem solid #38b6ff; /* Utilizza rem */
     transition: transform 0.3s;
@@ -124,7 +124,7 @@ body {
     padding: 6rem 0; /* Utilizza rem */
 }
 
-#about h2 {
+h2 {
     font-size: 2.5rem; /* Mantieni il rem */
     margin-bottom: 2rem; /* Utilizza rem */
     color: #38b6ff;
@@ -136,35 +136,9 @@ body {
     line-height: 1.6;
 }
 
-/* Skills Section */
-#skills {
-    background-color: transparent;
-    color: #fff;
-    padding: 6rem 0; /* Utilizza rem */
-}
-
-#skills h2 {
-    font-size: 2.5rem; /* Mantieni il rem */
-    margin-bottom: 4rem; /* Utilizza rem */
-    color: #38b6ff;
-    position: relative;
-}
-
-#skills h2::after {
-    content: '';
-    position: absolute;
-    width: 60px; /* Mantieni la larghezza in px per la barra */
-    height: 0.4rem; /* Usato rem per la dimensione */
-    background: #38b6ff;
-    bottom: -1rem; /* Usato rem per il margine */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Card Styles for Skills and Contacts */
-.skill-card,
-.contact-card {
-    height: 12rem; /* Altezza ridotta per tutte le card */
+/* Skills and Contact Card Styles */
+.card {
+    height: 12rem; /* Altezza uniforme per tutte le card */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,32 +150,22 @@ body {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.skill-card:hover,
-.contact-card:hover {
+.card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Add hover effect on the contact cards */
-.contact-card {
-    cursor: pointer; /* Cambia il cursore per indicare interattività */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetto di hover */
-}
-.contact-card:hover {
-    transform: scale(1.05); /* Ingrandisci leggermente al passaggio del mouse */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-
 /* Icon Styles */
-.skill-card i,
-.skill-card .icon,
-.contact-card i,
-.contact-card .icon {
+.card i,
+.card .icon {
     color: #38b6ff; /* Colore delle icone */
     margin-bottom: 1rem; /* Spaziatura con rem */
     width: 3rem; /* Dimensione uniforme per icone SVG */
     height: 3rem;
+}
+
+.card .icon:hover {
+    color: #2250e6; /* Colore dell'icona al passaggio del mouse */
 }
 
 /* Projects Section */
@@ -221,6 +185,28 @@ body {
 #projects .card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* New Project Video Styles */
+.project-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.project-video:hover {
+    transform: scale(1.05);
+}
+
+/* New Modal Styles */
+.modal-content {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.modal-header .btn-close {
+    background-color: #ffffff;
 }
 
 /* Contact Section */
@@ -277,8 +263,7 @@ footer p {
     #skills h2 {
         font-size: 2rem; /* Mantieni il rem */
     }
-    .skill-card,
-    .contact-card {
+    .card {
         height: 14rem; /* Rimpicciolita per le versioni mobile */
         padding: 1.5rem; /* Padding più piccolo */
     }

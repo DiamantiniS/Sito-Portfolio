@@ -85,3 +85,21 @@ document.addEventListener("DOMContentLoaded", () => {
     retina_detect: true,
   });
 });
+
+// Video hover effect
+document.querySelectorAll('.project-video').forEach(video => {
+    video.addEventListener('mouseover', function() {
+        this.play();
+    });
+    video.addEventListener('mouseout', function() {
+        this.pause();
+        this.currentTime = 0;
+    });
+    video.addEventListener('click', function() {
+        const modalId = this.closest('.card').querySelector('.btn-primary').getAttribute('data-bs-target');
+        const modal = document.querySelector(modalId);
+        const modalVideo = modal.querySelector('video');
+        modalVideo.src = this.querySelector('source').src;
+        $(modal).modal('show');
+    });
+});
