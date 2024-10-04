@@ -138,7 +138,7 @@ h2 {
 
 /* Skills and Contact Card Styles */
 .card {
-    height: 12rem; /* Altezza uniforme per tutte le card */
+    height: 100%; /* Altezza uniforme per tutte le card */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,7 +187,20 @@ h2 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* New Project Video Styles */
+#projects .card-body {
+    padding: 1rem; /* Aggiungi padding per evitare che il contenuto venga inglobato */
+}
+
+#projects .card-title {
+    font-size: 1.5rem; /* Dimensione del titolo */
+    margin-bottom: 0.5rem; /* Spazio sotto il titolo */
+}
+
+#projects .card-text {
+    font-size: 1rem; /* Dimensione del testo */
+    margin-bottom: 1rem; /* Spazio sotto il testo */
+}
+
 .project-video {
     width: 100%;
     height: auto;
