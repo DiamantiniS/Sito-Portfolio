@@ -170,56 +170,47 @@ h2 {
 
 /* Projects Section */
 #projects {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    padding: 6rem 0; /* Utilizza rem */
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 6rem 0; /* Utilizza rem */
 }
 
 #projects .card {
-    background-color: #2c2c2c;
-    border: none;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #2c2c2c;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #projects .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 #projects .card-body {
-    padding: 1rem; /* Aggiungi padding per evitare che il contenuto venga inglobato */
+  padding: 1rem; /* Aggiungi padding per evitare che il contenuto venga inglobato */
 }
 
 #projects .card-title {
-    font-size: 1.5rem; /* Dimensione del titolo */
-    margin-bottom: 0.5rem; /* Spazio sotto il titolo */
+  font-size: 1.5rem; /* Dimensione del titolo */
+  margin-bottom: 0.5rem; /* Spazio sotto il titolo */
 }
 
 #projects .card-text {
-    font-size: 1rem; /* Dimensione del testo */
-    margin-bottom: 1rem; /* Spazio sotto il testo */
+  font-size: 1rem; /* Dimensione del testo */
+  margin-bottom: 1rem; /* Spazio sotto il testo */
 }
 
 .project-video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Aggiunge il puntatore quando si passa sul video */
 }
 
 .project-video:hover {
-    transform: scale(1.05);
-}
-
-/* New Modal Styles */
-.modal-content {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-.modal-header .btn-close {
-    background-color: #ffffff;
+  transform: scale(1.05);
 }
 
 /* Contact Section */
@@ -256,31 +247,4 @@ footer p {
     font-size: 1rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .home-content h1 {
-        font-size: 2.5rem; /* Mantieni il rem */
-    }
-    .home-content .typing-text {
-        font-size: 1.5rem; /* Mantieni il rem */
-    }
-    .home-img img {
-        max-width: 25rem; /* Utilizza rem per larghezza massima */
-    }
-    #about h2 {
-        font-size: 2rem; /* Mantieni il rem */
-    }
-    #about p {
-        font-size: 1rem; /* Mantieni il rem */
-    }
-    #skills h2 {
-        font-size: 2rem; /* Mantieni il rem */
-    }
-    .card {
-        height: 14rem; /* Rimpicciolita per le versioni mobile */
-        padding: 1.5rem; /* Padding più piccolo */
-    }
-    #projects .card {
-        margin-bottom: 2rem; /* Margine inferiore */
-    }
-}
+
