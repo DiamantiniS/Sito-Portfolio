@@ -91,14 +91,16 @@ body {
 }
 
 .home-img img {
-    max-width: 40rem; /* Ridotto per migliorare l'allineamento */
+    max-width: 40rem;
     border-radius: 50%;
-    border: 0.5rem solid #38b6ff; /* Utilizza rem */
-    transition: transform 0.3s;
+    border: 0.5rem solid #38b6ff;
+    box-shadow: 0 0 20px #38b6ff, 0 0 40px #38b6ff, 0 0 60px #38b6ff;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .home-img img:hover {
-    transform: scale(1.05); /* Subtle hover effect */
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #38b6ff, 0 0 60px #38b6ff, 0 0 90px #38b6ff;
 }
 
 /* Button Styles */
@@ -246,5 +248,3 @@ footer p {
     margin: 0;
     font-size: 1rem;
 }
-
-
