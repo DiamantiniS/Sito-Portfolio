@@ -55,6 +55,16 @@ body {
     width: 100%; /* Espande la linea sotto il testo */
 }
 
+/* Keyframes per l'animazione fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Home Section */
 .home {
     min-height: 100vh;
@@ -66,23 +76,27 @@ body {
 
 .home-content {
     flex: 1; /* Permette al contenuto di occupare spazio */
+    animation: fadeIn 2s ease-in-out; /* Applica l'animazione fade-in */
 }
 
 .home-content h1 {
     font-size: 2.5rem; /* Rimpicciolito per allineamento migliore */
     font-weight: bold;
     color: #ffffff;
+    animation: fadeIn 2s ease-in-out 0.5s; /* Applica l'animazione fade-in con ritardo */
 }
 
 .home-content .typing-text {
     font-size: 1.5rem; /* Rimpicciolito per allineamento migliore */
     color: #38b6ff;
+    animation: fadeIn 2s ease-in-out 1s; /* Applica l'animazione fade-in con ritardo */
 }
 
 .home-content p {
     font-size: 1.2rem; /* Mantieni il rem */
     color: #bbbbbb;
     margin-bottom: 2rem; /* Utilizza rem */
+    animation: fadeIn 2s ease-in-out 1.5s; /* Applica l'animazione fade-in con ritardo */
 }
 
 .home-img {
