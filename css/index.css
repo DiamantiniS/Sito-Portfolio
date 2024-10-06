@@ -102,19 +102,27 @@ body {
 .home-img {
     display: flex; /* Utilizza flex per un migliore allineamento */
     justify-content: center; /* Allinea l'immagine al centro */
+    position: relative; /* Necessario per posizionare il blob */
+}
+
+.home-img .blob-bg {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Posiziona il blob dietro l'immagine */
 }
 
 .home-img img {
     max-width: 40rem;
-    border-radius: 50%;
-    border: 0.5rem solid #38b6ff;
-    box-shadow: 0 0 20px #38b6ff, 0 0 40px #38b6ff, 0 0 60px #38b6ff;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .home-img img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px #38b6ff, 0 0 60px #38b6ff, 0 0 90px #38b6ff;
+    /* box-shadow: 0 0 30px #38b6ff, 0 0 60px #38b6ff, 0 0 90px #38b6ff; */
 }
 
 /* Button Styles */
