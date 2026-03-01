@@ -32,7 +32,10 @@ function deleteText() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", type);
+document.addEventListener("DOMContentLoaded", () => {
+  typingText.textContent = "";  // <-- FIX: evita append al testo già presente in HTML
+  type();
+});
 
 // Initialize AOS (Animate On Scroll)
 AOS.init({

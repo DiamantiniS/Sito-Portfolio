@@ -86,10 +86,14 @@ body {
     animation: fadeIn 2s ease-in-out 0.5s; /* Applica l'animazione fade-in con ritardo */
 }
 
-.home-content .typing-text {
-    font-size: 1.5rem; /* Rimpicciolito per allineamento migliore */
-    color: #38b6ff;
-    animation: fadeIn 2s ease-in-out 1s; /* Applica l'animazione fade-in con ritardo */
+.home-content .typing-text{
+  font-size: 1.5rem; /* Rimpicciolito per allineamento migliore */
+  color: #38b6ff;
+  animation: fadeIn 2s ease-in-out 1s; /* Applica l'animazione fade-in con ritardo */
+
+  display: inline-block;
+  white-space: nowrap; /* evita il wrap che fa saltare la pagina */
+  min-height: 1.2em;   /* mantiene altezza stabile */
 }
 
 .home-content p {
